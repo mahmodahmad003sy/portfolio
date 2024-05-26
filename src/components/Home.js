@@ -1,8 +1,9 @@
 import React from "react";
 import { HiArrowCircleRight, HiOutlineArrowRight } from "react-icons/hi";
+import { Link } from "react-scroll";
 export const Home = () => {
   return (
-    <div className="w-full h-screen bg-[#0a192f]">
+    <div name="home" className="w-full h-screen bg-[#0a192f]">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 justify-center h-full flex flex-col ">
         <p className="text-pink-600">Hi, my name is </p>

@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import { FaBars, FaFacebook, FaGithub, FaTimes } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { Link } from "react-scroll";
 export const NavBar = () => {
   const [nav, setNav] = useState(false);
 
@@ -14,11 +15,31 @@ export const NavBar = () => {
       </div>
 
       <ul className="hidden md:flex justify-between">
-        <li className="px-4">Home</li>
-        <li className="px-4">About</li>
-        <li className="px-4">Skills</li>
-        <li className="px-4">Work</li>
-        <li className="px-4">Contact</li>
+        <li className="px-4">
+          <Link to="home" smooth duration={300}>
+            Home
+          </Link>
+        </li>
+        <li className="px-4">
+          <Link to="about" smooth duration={300}>
+            About
+          </Link>
+        </li>
+        <li className="px-4">
+          <Link to="skills" smooth duration={300}>
+            Skills
+          </Link>
+        </li>
+        <li className="px-4">
+          <Link to="work" smooth duration={300}>
+            Work
+          </Link>
+        </li>
+        <li className="px-4">
+          <Link to="contact" smooth duration={300}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       <div onClick={handleClick} className="md:hidden z-10">
@@ -33,11 +54,31 @@ export const NavBar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center "
         }
       >
-        <li className=" py-6 text-4xl px-4">Home</li>
-        <li className=" py-6 text-4xl px-4">About</li>
-        <li className=" py-6 text-4xl px-4">Skills</li>
-        <li className="py-6 text-4xl px-4">Work</li>
-        <li className="py-6 text-4xl px-4">Contact</li>
+        <li className=" py-6 text-4xl px-4">
+          <Link onClick={handleClick} to="home" smooth duration={300}>
+            Home
+          </Link>
+        </li>
+        <li className=" py-6 text-4xl px-4">
+          <Link onClick={handleClick} to="about" smooth duration={300}>
+            About
+          </Link>
+        </li>
+        <li className=" py-6 text-4xl px-4">
+          <Link onClick={handleClick} to="about" smooth duration={300}>
+            Skills
+          </Link>
+        </li>
+        <li className="py-6 text-4xl px-4">
+          <Link onClick={handleClick} to="about" smooth duration={300}>
+            Work
+          </Link>
+        </li>
+        <li className="py-6 text-4xl px-4">
+          <Link onClick={handleClick} to="about" smooth duration={300}>
+            Contact
+          </Link>
+        </li>
       </ul>
       {/* social media */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
